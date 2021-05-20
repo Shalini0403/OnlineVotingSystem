@@ -1,0 +1,70 @@
+<html>
+    <head>
+
+        <title>OnlineVoting:Registration</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+
+    </head>
+    <body>
+        <style>
+            #address{
+                width:30%
+                
+            }
+            #imagepart{
+                border:2px solid black;
+                border-radius:5px;
+                padding:10px;
+                width:30%
+            }
+            #role{
+                border:2px solid black;
+                border-radius:5px;
+                padding:10px;
+                width:30%
+            }
+            #role select{
+                border-radius:5px;
+                padding:10px;
+            }
+
+        </style>
+        <center>
+        <div id="headersection">
+         <h1>Online Voting System</h1>
+         <hr>
+         </div>
+         <div id="bodysection">
+         <h3>Registration</h3>
+         <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name ="Name" placeholder="Enter Name">
+            <input type="number" name ="Mobile"placeholder="Enter mobile number"><br><br>
+            <input type="password" name ="password"placeholder="Enter password">
+            <input type="password" name ="cpassword"placeholder="Confirm Password"><br><br>
+            <input id="address" type="text" name ="address"placeholder="Enter Address"><br><br>
+           
+            <div id="imagepart">
+            Upload Image:<input type="file" name ="image">
+            </div><br>     
+            <div id="role">    
+             Select Role: <select  name="role">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select>
+            </div><br><br>
+            
+            <button style=" padding:5px;
+                            border-radius:5px;
+                            background-color:blue;
+                            color:white;">
+            Register</button><br><br>
+            Already a User?<a href="../index.html">Login</a>
+        </form>
+        </div>
+    </center>
+    </body>
+
+
+
+</html>
+
